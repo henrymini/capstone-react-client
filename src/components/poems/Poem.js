@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 
@@ -18,6 +18,11 @@ class Poem extends Component {
         this.setState({ poem: res.data.poem })
       })
       .catch(console.error)
+  }
+  render () {
+    return (
+      'sremm lyfe'
+    )
   }
 }
 
