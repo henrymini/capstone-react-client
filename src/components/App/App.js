@@ -8,9 +8,9 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
-import Poem from '../../poems/Poem'
-import PoemCreate from '../../poems/PoemCreate'
-import Poems from '../../poems/Poems'
+import Poem from '../poems/Poem'
+import PoemCreate from '../poems/PoemCreate'
+import Poems from '../poems/Poems'
 // import PoemEdit from '../../poems/'
 
 class App extends Component {
