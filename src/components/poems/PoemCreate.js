@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 import { Redirect } from 'react-router-dom'
+import PoemForm from './PoemForm'
 
 class PoemCreate extends Component {
   constructor (props) {
@@ -52,7 +53,11 @@ class PoemCreate extends Component {
       return <Redirect to={`/poems/${this.state.createdId}`} />
     }
     return (
-      'this is a return statement'
+      <PoemForm
+        poem={this.state.poem}
+        handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}
+      />
     )
   }
 }
