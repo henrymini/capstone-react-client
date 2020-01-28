@@ -8,6 +8,10 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import Poem from '../../poems/Poem'
+import PoemCreate from '../../poems/PoemCreate'
+import Poems from '../../poems/Poems'
+// import PoemEdit from '../../poems/'
 
 class App extends Component {
   constructor () {
@@ -42,6 +46,16 @@ class App extends Component {
           />
         ))}
         <main className="container">
+          <Route exact path='/poems/:id' render={(props) => (
+            <Poem user={user} match={props.match} history={props.history} alert={this.alert} />
+          )} />
+          <Route exact path='/' render={({ location }) => (
+            <Poems location={location} />
+          )} />
+          <AuthenticatedRoute user={user} path='/create-poem' render={() => (
+            <PoemCreate alert={this.alert} user={user} />
+          )} />
+
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />
           )} />
