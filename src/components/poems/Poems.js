@@ -13,9 +13,13 @@ class Poems extends Component {
     this.getPoems()
   }
   getPoems = () => {
+    const { user } = this.props
     axios({
-      url: 'http://localhost:4741/books',
-      method: 'GET'
+      url: 'http://localhost:4741/poems',
+      method: 'GET',
+      headers: {
+        'Authorization': `Token token=${user.token}`
+      }
     })
       .then(response => {
         // this reverses the array of poems to show the most recent first
@@ -28,7 +32,7 @@ class Poems extends Component {
     if (!this.state.poems.length) {
       poemsJsx = <p>loading...loading...loading...loading...</p>
     } else {
-      poemsJsx = this.state.books.map(poem => (
+      poemsJsx = this.state.poems.map(poem => (
         // ListGroup is a react-bootstrap component
         <ListGroup.Item
           key={poem._id}

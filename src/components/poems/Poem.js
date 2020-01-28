@@ -10,9 +10,13 @@ class Poem extends Component {
     }
   }
   componentDidMount () {
+    const { user } = this.props
     axios({
       url: `${apiUrl}/poems/${this.props.match.params.id}`,
-      method: 'GET'
+      method: 'GET',
+      headers: {
+        'Authorization': `Token token=${user.token}`
+      }
     })
       .then(res => {
         this.setState({ poem: res.data.poem })

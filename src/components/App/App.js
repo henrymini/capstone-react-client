@@ -11,7 +11,8 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 import Poem from '../poems/Poem'
 import PoemCreate from '../poems/PoemCreate'
 import Poems from '../poems/Poems'
-// import PoemEdit from '../../poems/'
+import PoemEdit from '../poems/PoemEdit'
+// import Homepage from '../Home/Home'
 
 class App extends Component {
   constructor () {
@@ -46,20 +47,27 @@ class App extends Component {
           />
         ))}
         <main className="container">
-          <Route exact path='/poems/:id' render={(props) => (
+          <AuthenticatedRoute exact user={user} path='/poems/:id' render={(props) => (
             <Poem user={user} match={props.match} history={props.history} alert={this.alert} />
           )} />
-          <Route exact path='/' render={({ location }) => (
-            <Poems location={location} />
+          <AuthenticatedRoute user={user} exact path='/' render={({ location }) => (
+            <Poems user={user} location={location} />
           )} />
           <AuthenticatedRoute user={user} path='/create-poem' render={() => (
             <PoemCreate alert={this.alert} user={user} />
           )} />
-
+          <AuthenticatedRoute exact user={user} path='/poems/:id/edit' render={({ match }) => (
+            <PoemEdit alert={this.alert} user={user} match={match} />
+          )} />
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />
           )} />
-          <Route path='/sign-in' render={() => (
+          {
+          // <Route exact path='/hgv' render={() => (
+          //   <Homepage alert={this.alert} />
+          // )} />
+          }
+          <Route exact path='/sign-in' render={() => (
             <SignIn alert={this.alert} setUser={this.setUser} />
           )} />
           <AuthenticatedRoute user={user} path='/sign-out' render={() => (
