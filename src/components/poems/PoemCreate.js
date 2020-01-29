@@ -29,6 +29,7 @@ class PoemCreate extends Component {
     event.preventDefault()
     axios({
       url: `${apiUrl}/poems`,
+      method: 'POST',
       headers: {
         'Authorization': `Token token=${this.props.user.token}`
       },
