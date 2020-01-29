@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const authenticatedOptions = (
   <Fragment>
+    <Nav.Link href="#create-poem">Make an Addition</Nav.Link>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
   </Fragment>
@@ -16,12 +17,11 @@ const unauthenticatedOptions = (
     <Nav.Link href="#sign-in">Sign In</Nav.Link>
   </Fragment>
 )
-
-const alwaysOptions = (
-  <Fragment>
-    <Nav.Link to="/">Home</Nav.Link>
-  </Fragment>
-)
+//
+// const alwaysOptions = (
+//   <Fragment>
+//   </Fragment>
+// )
 
 const Header = ({ user }) => (
   <Navbar bg="danger" variant="light" expand="md">
@@ -32,7 +32,9 @@ const Header = ({ user }) => (
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto">
         { user && <span className="navbar-text mr-2">Welcome, {user.email}</span>}
-        { alwaysOptions }
+        {
+          // { alwaysOptions }
+        }
         { user ? authenticatedOptions : unauthenticatedOptions }
       </Nav>
     </Navbar.Collapse>
