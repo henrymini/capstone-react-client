@@ -16,7 +16,7 @@ class Poems extends Component {
   getPoems = () => {
     const { user } = this.props
     axios({
-      url: `${apiUrl}`,
+      url: `${apiUrl}/poems`,
       method: 'GET',
       headers: {
         'Authorization': `Token token=${user.token}`
