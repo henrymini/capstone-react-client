@@ -35,7 +35,7 @@ class PoemEdit extends Component {
     handleChange = event => {
       this.setState({
         poem: {
-          ...this.state.book,
+          ...this.state.poem,
           [event.target.name]: event.target.value
         }
       })

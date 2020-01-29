@@ -51,7 +51,7 @@ class Poem extends Component {
         {
           // route to authenticated home page (a.k.a. all the poems)
           pathname: '/',
-          state: { deleted: this.state.book._id }
+          state: { deleted: this.state.poem._id }
         }
       } />
     }

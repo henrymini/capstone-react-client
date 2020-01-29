@@ -34,7 +34,7 @@ const PoemForm = ({ poem, handleChange, handleSubmit }) => (
         name="year"
       />
       <button type="submit" className="btn btn-danger">{poem._id ? 'Update' : 'Add'}</button>
-      <Link to={poem._id ? `/poems/${poem._id}` : '/'} className="btn btn-warning">Cancel</Link>
+      <Link to={poem._id ? `/poems/${poem._id}` : '/'} className="btn btn-secondary">Back</Link>
     </form>
   </div>
 )
