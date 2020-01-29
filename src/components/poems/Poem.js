@@ -1,6 +1,7 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
+import { Link, Redirect } from 'react-router-dom'
 
 class Poem extends Component {
   constructor (props) {
@@ -45,8 +46,20 @@ class Poem extends Component {
       }))
   }
   render () {
+    if (this.state.deleted) {
+      return <Redirect to={
+        {
+          // route to authenticated home page (a.k.a. all the poems)
+          pathname: '/',
+          state: { deleted: this.state.book._id }
+        }
+      } />
+    }
+    if (!this.state.book) {
+      return <p>loading...loading...loading...loading...</p>
+    }
     return (
-      'sremm lyfe'
+      'all that jazz with the the book deets'
     )
   }
 }
