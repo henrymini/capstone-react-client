@@ -55,11 +55,24 @@ class Poem extends Component {
         }
       } />
     }
-    if (!this.state.book) {
+    if (!this.state.poem) {
       return <p>loading...loading...loading...loading...</p>
     }
     return (
-      'all that jazz with the the book deets'
+      <div>
+        <h2>{this.state.poem.title}</h2>
+        <h4>{this.state.poem.author}</h4>
+        <hr/>
+        <p>{this.state.poem.body}</p>
+        {this.state.poem.year && <p>Released {this.state.poem.year}</p>}
+        <div>
+          <React.Fragment>
+            <Link className="btn btn-danger" to={`/poems/${this.props.match.params.id}/edit`}>Edit</Link>
+            <button className="btn btn-warning" onClick={this.handleDelete}>Delete</button>
+          </React.Fragment>
+          <Link className="btn btn-secondary" to="/">Back</Link>
+        </div>
+      </div>
     )
   }
 }

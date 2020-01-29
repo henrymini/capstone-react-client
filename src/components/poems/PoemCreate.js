@@ -40,11 +40,11 @@ class PoemCreate extends Component {
       .then(() => this.props.alert({
         heading: 'Brilliant!',
         message: 'A marvelous addition!',
-        variant: 'succes'
+        variant: 'success'
       }))
       .catch(() => this.props.alert({
         heading: 'Something Goofed™',
-        message: 'Try again!',
+        message: 'This poem was not created!',
         variant: 'danger'
       }))
   }

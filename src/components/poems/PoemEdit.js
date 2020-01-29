@@ -54,7 +54,7 @@ class PoemEdit extends Component {
       })
         .then(res => this.setState({ updated: true }))
         .then(() => this.props.alert({
-          heading: 'Nothing ever Finished',
+          heading: 'Nothing is ever finished',
           message: 'You updated a poem.',
           variant: 'success'
         }))
