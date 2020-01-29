@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import ListGroup from 'react-bootstrap/ListGroup'
+import apiUrl from '../../apiConfig'
 
 class Poems extends Component {
   constructor (props) {
@@ -15,7 +16,7 @@ class Poems extends Component {
   getPoems = () => {
     const { user } = this.props
     axios({
-      url: 'http://localhost:4741/poems',
+      url: `${apiUrl}`,
       method: 'GET',
       headers: {
         'Authorization': `Token token=${user.token}`
