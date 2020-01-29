@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const PoemForm = ({ poem, handleChange, handleSubmit }) => (
   <div>
-    <h1>{poem._id ? 'Update' : 'Create a new Poem'}</h1>
+    <h1>{poem._id ? 'Update' : 'Enter Poem Information'}</h1>
     <form onSubmit={handleSubmit}>
       <input
         placeholder="Title"
