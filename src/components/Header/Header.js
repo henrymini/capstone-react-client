@@ -24,7 +24,7 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-  <Navbar bg="primary" variant="dark" expand="md">
+  <Navbar bg="danger" variant="light" expand="md">
     <Navbar.Brand href="#">
       How did Voltaire like his apples? Candide
     </Navbar.Brand>
