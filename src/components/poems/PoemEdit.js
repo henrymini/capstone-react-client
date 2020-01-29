@@ -19,11 +19,11 @@ class PoemEdit extends Component {
   }
   componentDidMount () {
     axios({
-      url: `${apiUrl}/poems/${this.props.match.params.id}`,
+      url: `${apiUrl}/poems/${this.props.match.params.id}/edit`,
       method: 'GET'
     })
       .then(res => {
-        console.log('we\'re in here')
+        // console.log('we\'re in here')
         const poem = {
           ...res.data.poem,
           year: res.data.poem.year.substring(0, 10)

@@ -59,16 +59,16 @@ class Poem extends Component {
       return <p>loading...loading...loading...loading...</p>
     }
     return (
-      <div>
+      <div id="poem-display">
         <h2>{this.state.poem.title}</h2>
         <h4>{this.state.poem.author}</h4>
         <hr/>
         <p>{this.state.poem.body}</p>
         {this.state.poem.year && <p>Released {this.state.poem.year}</p>}
-        <div>
+        <div className="poem-buttons">
           <React.Fragment>
-            <Link className="btn btn-danger" to={`/poems/${this.props.match.params.id}/edit`}>Edit</Link>
-            <button className="btn btn-warning" onClick={this.handleDelete}>Delete</button>
+            <Link className="btn btn-danger mr-2" to={`/poems/${this.props.match.params.id}/edit`}>Edit</Link>
+            <button className="btn btn-warning mr-2" onClick={this.handleDelete}>Delete</button>
           </React.Fragment>
           <Link className="btn btn-secondary" to="/">Back</Link>
         </div>

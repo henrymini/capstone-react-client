@@ -1,1 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background-image: url("https://media.newyorker.com/photos/5c01c29b35b3693789275941/master/pass/2018IR_Poetry_Savage-Black.jpg");
+  font-family: 'Lobster', bold;
+}
+
+#poem-display {
+  background-color: darkgray;
+  border-radius: 5%;
+}
+
+#poem-buttons {
+  align-self: center;
+}
+
+#poem-list {
+  color: darkgray;
+}
+
+.row {
+  color: darkgray;
+}
