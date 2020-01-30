@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const PoemForm = ({ poem, handleChange, handleSubmit }) => (
-  <div className="row">
-    <div className="col-sm-10 col-md-8 mx-auto mt-5">
+  <div id="poem-form">
+    <div className="col-xs-6 col-md-8 mx-auto mt-auto">
       <h1>{poem._id ? 'Update' : 'Enter Poem Information'}</h1>
       <form onSubmit={handleSubmit}>
         <input

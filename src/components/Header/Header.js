@@ -25,8 +25,8 @@ const unauthenticatedOptions = (
 
 const Header = ({ user }) => (
   <Navbar bg="danger" variant="light" expand="md">
-    <Navbar.Brand href="#">
-      How did Voltaire like his apples? Candide
+    <Navbar.Brand href="#" id="title">
+      Poem Forum
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
