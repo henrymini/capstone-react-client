@@ -59,7 +59,7 @@ class Poem extends Component {
       return <p>loading...loading...loading...loading...</p>
     }
     return (
-      console.log(this.state.poem),
+      // console.log(this.state.poem),
       <div id="poem-display">
         <h2>{this.state.poem.title}</h2>
         <h4>{this.state.poem.author}</h4>
