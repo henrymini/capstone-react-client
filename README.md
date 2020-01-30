@@ -1,3 +1,5 @@
+# Description
+
 This is the front end for my poetry capstone project. It acts as a private forum/web storage for a poetry collection. Being a private collection, a user must first sign in using the link on the navbar in the top right corner. A sign up feature is provided for new users. Once signed in, the navbar will change to display the option to change the accounts password as well as an option to sign out. The user will also be presented with titles and matching authors for a collection of poems and similar works. Clicking on one will bring up the body of the piece, along with the information underneath informing the user of the year of original publication. Authenticated users have the option of adding a piece to the collection by clicking 'Make an Addition' on the navbar. They will then be presented with a form to input the necessary information. Authenticated users have the option of editing or deleting pieces that they have created themselves.
 
 ## Matching back end repo:
@@ -28,7 +30,7 @@ I started this project with my back end, in the hope that if I could get the cus
 #### Application Screenshot
 
 This is a screenshot of the application past authorization. You can see two poems listed, Ozymandias by Percy Bysshe Shelley and The Raven by Edgar Allen Poe, but this application is capable of containing many more.
-![alt text](https://imgur.com/a/zSZ6KXf)
+![application screenshot](https://imgur.com/a/zSZ6KXf)
 
 This is the application view once one of the poems has been selected, in this case Ozymandias by Percy Bysshe Shelley.
-![alt text](https://imgur.com/a/xpVQ9QY)
+![poem view screenshot](https://imgur.com/a/xpVQ9QY)
