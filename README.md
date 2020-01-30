@@ -30,7 +30,7 @@ I started this project with my back end, in the hope that if I could get the cus
 #### Application Screenshot
 
 This is a screenshot of the application past authorization. You can see two poems listed, Ozymandias by Percy Bysshe Shelley and The Raven by Edgar Allen Poe, but this application is capable of containing many more.
-![application screenshot](https://imgur.com/a/zSZ6KXf)
+![application screenshot](https://i.imgur.com/7uYGy9f.png)
 
 This is the application view once one of the poems has been selected, in this case Ozymandias by Percy Bysshe Shelley.
-![poem view screenshot](https://imgur.com/a/xpVQ9QY)
+![poem view screenshot](https://i.imgur.com/S1OYkWi.png)
