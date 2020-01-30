@@ -19,8 +19,8 @@ class PoemEdit extends Component {
   }
   componentDidMount () {
     axios({
-      url: `${apiUrl}/poems/${this.props.match.params.id}/edit`,
-      method: 'GET'
+      url: `${apiUrl}/poems/${this.props.match.params.id}`,
+      method: 'PATCH'
     })
       .then(res => {
         // console.log('we\'re in here')
