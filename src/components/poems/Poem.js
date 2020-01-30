@@ -59,6 +59,7 @@ class Poem extends Component {
       return <p>loading...loading...loading...loading...</p>
     }
     return (
+      console.log(this.state.poem),
       <div id="poem-display">
         <h2>{this.state.poem.title}</h2>
         <h4>{this.state.poem.author}</h4>
@@ -66,7 +67,7 @@ class Poem extends Component {
         <p>{this.state.poem.body}</p>
         {this.state.poem.year && <p>Released {this.state.poem.year}</p>}
         <div className="poem-buttons">
-          {this.props.user && (this.props.user._id === this.state.book.owner._id) &&
+          {this.props.user && (this.props.user._id === this.state.poem.owner._id) &&
             (
               <React.Fragment>
                 <Link className="btn btn-danger mr-2" to={`/poems/${this.props.match.params.id}/edit`}>Edit</Link>
